@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nestable Load Example</title>
+</head>
+<body>
+
+<button id="loadButton">Load Content</button>
+
+<div id="contentArea" style="display: none;">
+    <h2>Welcome to the Unstable Load Site!</h2>
+    <p>This content appeared after some delay.</p>
+</div>
+
+<script>
+    document.getElementById("loadButton").addEventListener("click", function() {
+        setTimeout(function() {
+            document.getElementById("contentArea").style.display = "block";
+        }, 5000);  // 5 seconds delay
+    });
+</script>
+
+</body>
+</html>
+
